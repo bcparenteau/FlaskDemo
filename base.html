@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Flask Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/messages">Messages</a>
+    </nav>
+
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" width="100">
+        
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>
